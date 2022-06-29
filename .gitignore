@@ -4,6 +4,8 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+./Per_Notes.md
+
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
 .env
