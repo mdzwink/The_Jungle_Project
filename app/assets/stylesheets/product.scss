@@ -74,6 +74,7 @@
     }
     .soldout {
       width: 140px;
+      height: 10px;
       margin: 1em 0;
       display: inline-block;
       background: rgba(224, 14, 14, 0.8);
@@ -86,6 +87,11 @@
       color: white;
       font-weight: 700;
       text-align: center;
+    }
+    section.button_footer {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0.5em;
     }
   }
 }
