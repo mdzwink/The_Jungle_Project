@@ -1,4 +1,21 @@
 
+feature/sold-out-badge  << return to style
+
+if product.quantity ==0 
+sold-out = true
+:disabled => sold-out
+
+fix/empty-cart-ui   << return to style
+
+cart still shows empty table and checkout option when cart is empty
+
+approach:
+find where table and checkout feature is being rendered () and either 
+1. make it conditional on cart quantity () OR  <== FIRST CHOICE
+2. intercept render and point elsewhere?
+end goal:
+show friendly alert () and provide link to home ()
+
 
 fix/money-formatting
 
@@ -30,5 +47,3 @@ in erb:
 <% raise @category.inspect %>
 
 <% debug @category %>
-
-# 
