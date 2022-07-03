@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'categories/index'
+    get 'categories/new'
+  end
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
@@ -10,12 +14,13 @@ Rails.application.routes.draw do
     post   :add_item
     post   :remove_item
   end
-
+  
   resources :orders, only: [:create, :show]
 
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
+    resources :categories, except: [:edit, :show]
   end
 
 
