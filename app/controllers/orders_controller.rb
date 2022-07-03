@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @purchase_details = @order.line_items
   end
-  
+
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
