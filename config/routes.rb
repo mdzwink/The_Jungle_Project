@@ -23,6 +23,9 @@ Rails.application.routes.draw do
     resources :categories, except: [:edit, :show]
   end
 
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
