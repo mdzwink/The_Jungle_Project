@@ -36,21 +36,18 @@ RSpec.describe User, type: :model do
       expect(user.valid?).to eql(false)
       # expect(user.errors[:password_confirmation].to include("doesn't match Password"))
     end
-    # it 'should not create a new user when email already exists' do
-    #   @user1 = User.new({email: "test@test.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
-    #   @user2 = User.new({email: "TEST@TEST.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
-    #   puts @user1.valid?
-    #   puts @user2.valid?
-    #   puts @user2.errors[:email]
-    #   expect(@user2.valid?).to eql(false)
-    #   # expect(user.errors[:email].to include(""))
-    # end
+    it 'should not create a new user when email already exists' do
+      @user1 = User.create({email: "test@test.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
+      @user2 = User.create({email: "TEST@TEST.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
+      expect(@user2.valid?).to eql(false)
+      # expect(user.errors[:email].to include(""))
+    end
     it 'should not create a new user when password is less than 8 characters' do
       user = User.new({email: "test@test.com", first_name: "John", last_name: "Doe", password: "passwor", password_confirmation: "passwor"})
       expect(user.valid?).to eql(false)
     end
   end
-  describe '.authenticate_with_credentials' do
-    it 'should save user with '
-  end
+  # describe '.authenticate_with_credentials' do
+  #   it 'should save user with '
+  # end
 end
