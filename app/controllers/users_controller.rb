@@ -3,6 +3,13 @@ class UsersController < ApplicationController
   def new
   end
 
+  def authenticate_with_credentials(email, password)
+    user = User.find_by_email(email)
+    if user.authenticate(password)
+      return user
+    end
+  end
+
   def create
     user = User.new(user_params)
     if user.save
