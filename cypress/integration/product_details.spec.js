@@ -4,7 +4,7 @@ describe('visit home page', () => {
     cy.visit("/");
   });
 
-  it("There is products on the page", () => {
+  it("can click on product and be directed to product page", () => {
     cy.get('.products').find('[alt="Scented Blade"]').click()
       .get('.quantity')
   });
