@@ -29,3 +29,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- Bcrypt 3.1.7
+- Cypress 9.7.0
+- 
