@@ -6,7 +6,7 @@ describe('visit home page', () => {
 
   it("There is products on the page", () => {
     cy.get('.products').find('[alt="Scented Blade"]').click()
-      .contains("The Scented Blade is an extremely rare")
+      .get('.quantity')
   });
 
 })
