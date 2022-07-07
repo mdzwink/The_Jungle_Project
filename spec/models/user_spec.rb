@@ -51,21 +51,17 @@ RSpec.describe User, type: :model do
     it 'should login user with correct credentials' do
       newuser = User.create({email: "test@test.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
       user = User.authenticate_with_credentials("test@test.com", "password")
-      puts user[:email]
       expect(user[:email]).to eql("test@test.com")
     end
     it 'should login user with correct differently cased email' do
       newuser = User.create({email: "test@test.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
       user = User.authenticate_with_credentials("TEST@test.com", "password")
-      puts user[:email]
       expect(user[:email]).to eql("test@test.com")
     end
     it 'should login user with correct email with spaces before or after' do
       newuser = User.create({email: "test@test.com", first_name: "John", last_name: "Doe", password: "password", password_confirmation: "password"})
       user = User.authenticate_with_credentials("  test@test.com ", "password")
-      puts user[:email]
       expect(user[:email]).to eql("test@test.com")
     end
-    
   end
 end
