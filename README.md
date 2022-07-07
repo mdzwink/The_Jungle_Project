@@ -1,6 +1,17 @@
 # Jungle
 
+Search the jungle for your next wild addition to your home! Shop by category, register, Login, and Admin functionalities. 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+
+## Final Product
+
+![Main page of The Jungle.](https://github.com/mdzwink/The_Jungle_Project/blob/master/docs/The_Jungle_Home(1).png?raw=true)
+
+![Category page.](https://github.com/mdzwink/The_Jungle_Project/blob/master/docs/The_Jungle_Category(2).png?raw=true)
+
+![Signed in. Product sold out.](https://github.com/mdzwink/The_Jungle_Project/blob/master/docs/The_Jungle_Signed-in(3).png?raw=true)
+
+![Admin product management.](https://github.com/mdzwink/The_Jungle_Project/blob/master/docs/The_Jungle_Admin-products(4).png?raw=true)
 
 ## Setup
 
